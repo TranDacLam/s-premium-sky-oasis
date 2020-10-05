@@ -20,9 +20,11 @@
             background-repeat: no-repeat;
             background-position: 50%;
             padding-top: 110px;
-            display: flex;
             justify-content: center;
             align-items: flex-start;
+            &.show{
+                display: flex;
+            }
         }
         .nav{
             &-link {

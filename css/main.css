@@ -74,9 +74,10 @@ img {
       background-repeat: no-repeat;
       background-position: 50%;
       padding-top: 110px;
-      display: flex;
       justify-content: center;
       align-items: flex-start; }
+      .s-premium .navbar .collapse.show {
+        display: flex; }
     .s-premium .navbar .nav-link {
       position: relative;
       color: #eec183;
