@@ -1,74 +1,25 @@
 .white-color{
     color: $white-color;
 }
-
-.w-vw-100{
-    width: 100vw;
+.primary-color{
+    color: $primary-color;
 }
-.h-vh-100{
-    height: 100vh;
+.text-color{
+    color: $text-color;
 }
-.ff-thin{
-    font-family: 'Lato-Thin';
-}
-.ff-thin-italic{
-    font-family: 'Lato-ThinItalic';
-}
-.ff-light{
-    font-family: 'Lato-Light';
-}
-.ff-light-italic{
-    font-family: 'Lato-LightItalic';
-}
-.ff-regular{
-    font-family: 'Lato';
-}
-.ff-medium{
-    font-family: 'Lato-Medium';
-}
-.ff-medium-italic{
-    font-family: 'Lato-MediumItalic';
-}
-.ff-semibold{
-    font-family: 'Lato-Semibold';
-}
-.ff-semibold-italic{
-    font-family: 'Lato-SemiboldItalic';
-}
-.ff-bold{
-    font-family: 'Lato-Bold';
-}
-.ff-bold-italic{
-    font-family: 'Lato-BoldItalic';
-}
-.ff-black{
-    font-family: 'Lato-Black';
-}
-.ff-black-italic{
-    font-family: 'Lato-BlackItalic';
-}
-.ff-heavy{
-    font-family: 'Lato-Heavy';
-}
-.ff-heavy-italic{
-    font-family: 'Lato-HeavyItalic';
+.text-color-secondary{
+    color: $text-color-secondary;
 }
 
-.color-a1{
-    background-color: #ecdfb5;
+.ff-muli-regular{
+    font-family: 'Muli-Regular';
 }
-.color-a2{
-    background-color: #d4dd8e;
+.ff-muli-bold{
+    font-family: 'Muli-Bold';
 }
-.color-a3{
-    background-color: #9ec1dd;
+.ff-muli-extrabold{
+    font-family: 'Muli-ExtraBold';
 }
-.color-b1{
-    background-color: #dac3e7;
-}
-.color-b2{
-    background-color: #abdbe5;
-}
-.color-b3{
-    background-color: #e6f4dd;
+.ff-garamond-premr-pro{
+    font-family: 'Garamond-Premr-Pro';
 }

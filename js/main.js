@@ -12,7 +12,7 @@ $(function(){
 				],
 				scrollBar: true,
 				css3: true,
-				paddingTop: '75px',
+				// paddingTop: '75px',
 				responsiveWidth: 992,
 				// menu: '#navbar-menu',
 				// offsetSections: true,
@@ -32,156 +32,156 @@ $(function(){
 	
 
 	/* Start slide */
-	let navText = [
-		`<svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-chevron-left" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-			<path fill-rule="evenodd" d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z"/>
-		</svg>`,
-		`<svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-chevron-right" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-			<path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"/>
-		</svg>`
-	];
+	// let navText = [
+	// 	`<svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-chevron-left" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+	// 		<path fill-rule="evenodd" d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z"/>
+	// 	</svg>`,
+	// 	`<svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-chevron-right" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+	// 		<path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"/>
+	// 	</svg>`
+	// ];
 	
-	$('.utilities__list').owlCarousel({
-		items:1,
-		nav: true,
-		dots: false,
-		loop:true,
-		navText: navText,
-		autoplay:true,
-		autoplayTimeout:5000,
-		autoplayHoverPause:true,
-		responsive:{
-			0 : {
-				nav: false,
-				margin: 0,
-			},
-			568 : {
-				nav: true,
-			},
-		}
-	});
+	// $('.utilities__list').owlCarousel({
+	// 	items:1,
+	// 	nav: true,
+	// 	dots: false,
+	// 	loop:true,
+	// 	navText: navText,
+	// 	autoplay:true,
+	// 	autoplayTimeout:5000,
+	// 	autoplayHoverPause:true,
+	// 	responsive:{
+	// 		0 : {
+	// 			nav: false,
+	// 			margin: 0,
+	// 		},
+	// 		568 : {
+	// 			nav: true,
+	// 		},
+	// 	}
+	// });
 
-	$('.ground__list').owlCarousel({
-		items:1,
-		loop:true,
-		margin:30,
-		stagePadding: 200,
-		nav: true,
-		navText: navText,
-		autoplay:true,
-		autoplayTimeout:5000,
-		autoplayHoverPause:true,
-		responsive:{
-			0 : {
-				stagePadding: 0,
-				margin: 0,
-				nav: false,
-			},
-			568 : {
-				stagePadding: 0,
-				margin: 0,
-				nav: true,
-			},
-			// breakpoint from 992 up
-			992 : {
-				stagePadding: 200,
-			}
-		}
-	});
+	// $('.ground__list').owlCarousel({
+	// 	items:1,
+	// 	loop:true,
+	// 	margin:30,
+	// 	stagePadding: 200,
+	// 	nav: true,
+	// 	navText: navText,
+	// 	autoplay:true,
+	// 	autoplayTimeout:5000,
+	// 	autoplayHoverPause:true,
+	// 	responsive:{
+	// 		0 : {
+	// 			stagePadding: 0,
+	// 			margin: 0,
+	// 			nav: false,
+	// 		},
+	// 		568 : {
+	// 			stagePadding: 0,
+	// 			margin: 0,
+	// 			nav: true,
+	// 		},
+	// 		// breakpoint from 992 up
+	// 		992 : {
+	// 			stagePadding: 200,
+	// 		}
+	// 	}
+	// });
 
-	$('.apartment__list').owlCarousel({
-		items:1,
-		nav: true,
-		dots: false,
-		loop:true,
-		navText: navText,
-		autoplay:true,
-		autoplayTimeout:5000,
-		autoplayHoverPause:true,
-		responsive:{
-			0 : {
-				nav: false,
-				margin: 0,
-			},
-			568 : {
-				nav: true,
-			},
-		}
-	});
+	// $('.apartment__list').owlCarousel({
+	// 	items:1,
+	// 	nav: true,
+	// 	dots: false,
+	// 	loop:true,
+	// 	navText: navText,
+	// 	autoplay:true,
+	// 	autoplayTimeout:5000,
+	// 	autoplayHoverPause:true,
+	// 	responsive:{
+	// 		0 : {
+	// 			nav: false,
+	// 			margin: 0,
+	// 		},
+	// 		568 : {
+	// 			nav: true,
+	// 		},
+	// 	}
+	// });
 
-	$('.apartment a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
-        e.target // newly activated tab
-        e.relatedTarget // previous active tab
-		$(".apartment__list").trigger('refresh.owl.carousel');
-	});
+	// $('.apartment a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
+    //     e.target // newly activated tab
+    //     e.relatedTarget // previous active tab
+	// 	$(".apartment__list").trigger('refresh.owl.carousel');
+	// });
 
 
-	$('.furniture__list').owlCarousel({
-		items:1,
-		loop:true,
-		margin:10,
-		stagePadding: 250,
-		nav: true,
-		navText: navText,
-		autoplay:true,
-		autoplayTimeout:5000,
-		autoplayHoverPause:true,
-		responsive:{
-			0 : {
-				stagePadding: 0,
-				margin: 0,
-				nav: false,
-			},
-			568 : {
-				nav: true,
-				stagePadding: 0,
-				margin: 0,
-			},
-			// breakpoint from 992 up
-			992 : {
-				stagePadding: 250,
-			},
-			1400 : {
-				stagePadding: 350,
-			},
-			1660 : {
-				stagePadding: 350,
-			}
-		}
-	});
+	// $('.furniture__list').owlCarousel({
+	// 	items:1,
+	// 	loop:true,
+	// 	margin:10,
+	// 	stagePadding: 250,
+	// 	nav: true,
+	// 	navText: navText,
+	// 	autoplay:true,
+	// 	autoplayTimeout:5000,
+	// 	autoplayHoverPause:true,
+	// 	responsive:{
+	// 		0 : {
+	// 			stagePadding: 0,
+	// 			margin: 0,
+	// 			nav: false,
+	// 		},
+	// 		568 : {
+	// 			nav: true,
+	// 			stagePadding: 0,
+	// 			margin: 0,
+	// 		},
+	// 		// breakpoint from 992 up
+	// 		992 : {
+	// 			stagePadding: 250,
+	// 		},
+	// 		1400 : {
+	// 			stagePadding: 350,
+	// 		},
+	// 		1660 : {
+	// 			stagePadding: 350,
+	// 		}
+	// 	}
+	// });
 
-	$('.furniture a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
-        e.target // newly activated tab
-        e.relatedTarget // previous active tab
-		$(".furniture__list").trigger('refresh.owl.carousel');
-	});
+	// $('.furniture a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
+    //     e.target // newly activated tab
+    //     e.relatedTarget // previous active tab
+	// 	$(".furniture__list").trigger('refresh.owl.carousel');
+	// });
 
-	$('.news__list').owlCarousel({
-		items:3,
-		loop:true,
-		margin:60,
-		nav: true,
-		navText: [`<img src="images/arrow-1.png" />`, `<img src="images/arrow-2.png" />`],
-		autoplay:true,
-		autoplayTimeout:5000,
-		autoplayHoverPause:true,
-		responsive:{
-			0 : {
-				items:1,
-				nav: false,
-			},
-			// breakpoint from 768 up
-			768 : {
-				items:2,
-				nav: true,
-				margin:20,
-			},
-			// breakpoint from 992 up
-			992 : {
-				items:3,
-			}
-		}
-	});
+	// $('.news__list').owlCarousel({
+	// 	items:3,
+	// 	loop:true,
+	// 	margin:60,
+	// 	nav: true,
+	// 	navText: [`<img src="images/arrow-1.png" />`, `<img src="images/arrow-2.png" />`],
+	// 	autoplay:true,
+	// 	autoplayTimeout:5000,
+	// 	autoplayHoverPause:true,
+	// 	responsive:{
+	// 		0 : {
+	// 			items:1,
+	// 			nav: false,
+	// 		},
+	// 		// breakpoint from 768 up
+	// 		768 : {
+	// 			items:2,
+	// 			nav: true,
+	// 			margin:20,
+	// 		},
+	// 		// breakpoint from 992 up
+	// 		992 : {
+	// 			items:3,
+	// 		}
+	// 	}
+	// });
 
 	/* End slide */
 
@@ -191,6 +191,9 @@ $(function(){
 	// 	},1000)
 	
 	// })
+
+	$('#section0').parallax("50%", 0.1);
+	$('#section1').parallax("50%", 0.1);
 
 	/* Start Scroll fixed Menu */
 	var header = document.getElementById("landing-nav");
