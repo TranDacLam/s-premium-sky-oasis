@@ -1,0 +1,23 @@
+{
+  "name": "project-feliz-homes",
+  "version": "1.0.0",
+  "description": "![preview](images/scroll-eff.gif)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "scss": "node-sass --watch scss -o css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hayanisaid/bootstrap4-website.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hayanisaid/bootstrap4-website/issues"
+  },
+  "homepage": "https://github.com/hayanisaid/bootstrap4-website#readme",
+  "dependencies": {
+    "node-sass": "^4.14.1"
+  }
+}
