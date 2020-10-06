@@ -6,7 +6,7 @@
         position: fixed !important;
     }
     .navbar{
-        padding: 60px 40px;
+        padding: 60px 0 60px 50px;
         .collapse{
             position: fixed;
             top: 0;
@@ -143,7 +143,8 @@
         position: relative;
         background-color: $background-color;
         background-size: cover;
-        background-position: center; 
+        background-position: center;
+        padding-left: calc(#{$nav-bar-xl-width} + 40px);
     }
     /*header style*/
     .header{
@@ -153,6 +154,7 @@
         height: auto;
         z-index: 50;
         position: fixed;
+        padding-left: calc(#{$nav-bar-xl-width} + 40px);
         .container{
             display: flex;
             justify-content: space-between;
@@ -187,7 +189,6 @@
 
     .link-arrow{
         display: flex;
-        justify-content: center;
         a{
             color: $white-color;
             position: relative;
@@ -248,46 +249,41 @@
         h4{
             margin-bottom: 50px;
             text-transform: uppercase;
-            font-size: 48px;
+            font-size: 42px;
             color: $primary-color;
         }
         &__content{
             margin-top: -15%;
+        }
+        .link-arrow{
+            justify-content: center;
         }
     }
 
     &-2{
         background: url('../images/bg-2.png') 50% 0 no-repeat fixed;
         &__content{
+            flex: 1;
+            padding-right: 70px;
             h4{
                 position: relative;
                 margin-bottom: 32px;
                 text-transform: uppercase;
-                font-size: 25px;
+                font-size: 33px;
                 font-weight: 400;
-                line-height: 35.63px;
+                font-family: 'Garamond-Premr-Pro';
             }
             P{
-                font-size: 20px;
+                font-size: 16px;
                 font-weight: 400;
                 margin-bottom: 40px;
             }
         }
         &__img{
-            padding: 0;
-        }
-        &__content{
-            position: absolute;
-            right: 0;
-            top: 0;
-            bottom: 0;
-            left: 0;
-            display: flex;
-            align-items: center;
+            flex: 2;
             padding-right: 0;
             img{
-                max-height: 100%;
-                margin-left: auto;
+                width: 100%;
             }
         }
     }
