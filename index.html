@@ -19,23 +19,22 @@
 			<div class="navbar__sidebar">
 				<button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 					<img src="images/menu-white.svg" />
+					<span>Menu</span>
 				</button>
-				<div class="navbar__box">
-					<ul>
-						<li>
-							01
-						</li>
-						<li>
-							02
-						</li>
-						<li>
-							03
-						</li>
-						<li>
-							04
-						</li>
-					</ul>
-				</div>
+				<ul class="navbar__box">
+					<li>
+						<a class="active" href="#">01</a>
+					</li>
+					<li>
+						<a href="#">02</a>
+					</li>
+					<li>
+						<a href="#">03</a>
+					</li>
+					<li>
+						<a href="#">04</a>
+					</li>
+				</ul>
 				<div class="navbar__icon">
 	
 				</div>
@@ -69,38 +68,47 @@
 					</li>
 				</ul>
 				<button class="navbar__close" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-					<img src="images/menu-white.svg" />
+					<svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-x" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+						<path fill-rule="evenodd" d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
+					</svg>
+					<span>Đóng</span>
 				</button>
 			</div>
 		</nav>
 
 		<!-- header -->
-		<!-- <div class="header section" id="section0">
-			<a class="navbar-brand" href="">
+		<div class="header">
+			<div class="container">
+				<a class="header__logo" href="">
 					<img src="images/logo.svg" alt="Feliz Homes" />
 				</a>
-			<div class="container">
-				<div class="row">
-					<div class="col-6" >
-						<h4>
-							Tropical Resort</br>
-							Tận hưởng 365 ngày nghỉ dưỡng
-						</h4 >
-						<img src="images/title-header.png" />
+				<a class="header__hotline" href="tel:(+84) 969 789 589">
+					<img src="images/phone-call.svg" />
+					<div>
+						<p>hotline</p>
+						<span>(+84) 969 789 589</span>
 					</div>
-				</div>
+				</a>
 			</div>
-		</div> -->
+		</div>
 
 		<div class="s-premium-1 section" id="section0">
 			<div class="container">
 				<div class="row">
-					<div class="col-6" >
-						<h4>
-							Tropical Resort</br>
-							Tận hưởng 365 ngày nghỉ dưỡng
-						</h4 >
-						<!-- <img src="images/title-header.png" /> -->
+					<div class="col-6 text-center s-premium-1__content">
+						<img src="images/home.png" />
+						<h2>
+							Tuyệt phẩm Nghỉ dưỡng giữa lòng ecopark
+						</h2 >
+						<h4>Cách hồ gươm 14km</h4>
+						<div>
+							<a href="#">
+								Tìm hiểu dự án
+								<svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-right" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+									<path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/>
+								</svg>
+							</a>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -108,18 +116,56 @@
 
 
 		<div class="s-premium-2 section" id="section1">
-			<div class="container">
-				<div class="row">
-					<div class="col-6" >
-						<h4>
-							Tropical Resort</br>
-							Tận hưởng 365 ngày nghỉ dưỡng
-						</h4 >
-						<!-- <img src="images/title-header.png" /> -->
+			<div class="container-fluid">
+				<div class="row flex-row-reverse">
+					<div class="s-premium-3__content wow zoomInDown" data-wow-delay="0.5s">
+						<div class="container">
+							<div class="row">
+								<div class="col-lg-4 text-center">
+									<img class="mb-4 wow bounceInDown" src="images/icon-location.svg" />
+									<h4 class="wow bounceInUp" data-wow-delay="0.4s">Trung tâm <br> quận Hoàng Mai</h4>
+									<p class="wow bounceInUp" data-wow-delay="0.8s">
+										Feliz Homes tọa lạc giữa trung tâm quận Hoàng Mai, 
+										thuận tiện cho việc lưu thông vào trung tâm thủ đô Hà Nội, 
+										cũng như các bệnh viện tuyến đầu, các trường đại học lớn và hàng loạt tiện ích cho dân cư.
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-8 col-xl-7 pl-lg-5 pl-xl-0 s-premium-3__img text-center wow zoomIn">
+						<img src="images/s-premium-2.png" />
 					</div>
 				</div>
 			</div>
 		</div>
+
+		<div class="s-premium-3 section" id="section2">
+			<div class="container-fluid">
+				<div class="row flex-row-reverse">
+					<div class="s-premium-3__content wow zoomInDown" data-wow-delay="0.5s">
+						<div class="container">
+							<div class="row">
+								<div class="col-lg-4 text-center">
+									<img class="mb-4 wow bounceInDown" src="images/icon-location.svg" />
+									<h4 class="wow bounceInUp" data-wow-delay="0.4s">Trung tâm <br> quận Hoàng Mai</h4>
+									<p class="wow bounceInUp" data-wow-delay="0.8s">
+										Feliz Homes tọa lạc giữa trung tâm quận Hoàng Mai, 
+										thuận tiện cho việc lưu thông vào trung tâm thủ đô Hà Nội, 
+										cũng như các bệnh viện tuyến đầu, các trường đại học lớn và hàng loạt tiện ích cho dân cư.
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-8 col-xl-7 pl-lg-5 pl-xl-0 s-premium-3__img text-center wow zoomIn">
+						<img src="images/s-premium-2.png" />
+					</div>
+				</div>
+			</div>
+		</div>
+
+
 		<!-- contact section -->
 		<div class="contact section" id="section9">
 			
