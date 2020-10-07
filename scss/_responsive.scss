@@ -32,6 +32,27 @@
 
 }
 
+@media only screen and (min-width: 1500px) {
+    .s-premium{
+        &-2{
+            &__content{
+                flex: 1.2;
+            }
+            &__img{
+                padding-left: 3%;
+            }
+        }
+        &-3{
+            &__content{
+                flex: 1.4;
+            }
+            &__img{
+                padding-left: 5%;
+            }
+        }
+    }
+}
+
 @media only screen and (max-width: 1366px) and (min-width: 1250px) {
     
 }
