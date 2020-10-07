@@ -12,10 +12,19 @@
     
 }
 
-@media only screen and (min-width: 1344px) {
-    .container{
-        max-width: 1344px;
+@media only screen and (min-width: 1200px) {
+    .s-premium-2{
+        &__info{
+            &-item{
+                margin: 0 32px;
+                flex: 0 0 28%;
+            }
+        }
     }
+}
+
+@media only screen and (min-width: 1344px) {
+    
 }
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */

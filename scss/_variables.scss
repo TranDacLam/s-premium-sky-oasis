@@ -4,5 +4,10 @@ $text-color: #edd9c0;
 $background-color: #003d47;
 $text-color-secondary:#003d47;
 
-$nav-bar-xl-width: 110px;
-$nav-bar-lg-width: 110px;
+$top-header: 60px;
+$width-main-xxl: 1344px;
+
+$nav-bar-xl-width: calc(110px + 20px);
+$nav-bar-lg-width: calc(110px + 20px);
+
+$pl-main-xxl: calc((100vw - #{$width-main-xxl} - #{$nav-bar-xl-width})/2);

@@ -1,5 +1,13 @@
 .s-premium{
     /*Nav style*/
+    .content-main{
+        max-width: $width-main-xxl;
+        width: 100%;
+        padding-right: 15px;
+        padding-left: 15px;
+        margin-right: auto;
+        margin-left: auto;
+    }
     .fixed-top{
         right: unset;
         bottom: 0;
@@ -144,18 +152,20 @@
         background-color: $background-color;
         background-size: cover;
         background-position: center;
-        padding-left: calc(#{$nav-bar-xl-width} + 40px);
+        padding-left: $nav-bar-xl-width;
+        // padding-top: $top-header;
     }
+    
     /*header style*/
     .header{
         width: 100%;
-        top: 70px;
+        top: $top-header;
         left: 0;
         height: auto;
         z-index: 50;
         position: fixed;
-        padding-left: calc(#{$nav-bar-xl-width} + 40px);
-        .container{
+        padding-left: $nav-bar-xl-width;
+        .content-main{
             display: flex;
             justify-content: space-between;
         }
@@ -229,7 +239,7 @@
         font-weight: 400;
         display: flex;
         align-items: center;
-        margin-bottom: 34px;
+        margin-bottom: 30px;
         span{
             width: 35px;
             height: 1px;
@@ -262,16 +272,30 @@
 
     &-2{
         background: url('../images/bg-2.png') 50% 0 no-repeat fixed;
+        .fp-tableCell{
+            padding-bottom: 30px;
+            vertical-align: bottom;
+        }
+        .container-fluid{
+            .row{
+                margin-left: 0;
+            }
+        }
         &__content{
             flex: 1;
             padding-right: 70px;
+            padding-left: $pl-main-xxl;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
             h4{
                 position: relative;
                 margin-bottom: 32px;
                 text-transform: uppercase;
                 font-size: 33px;
                 font-weight: 400;
-                font-family: 'Garamond-Premr-Pro';
+                color: $primary-color;
+                @extend .ff-garamond-premr-pro;
             }
             P{
                 font-size: 16px;
@@ -285,6 +309,620 @@
             img{
                 width: 100%;
             }
+        }
+        &__info{
+            margin-top: 40px;
+            &-item{
+                padding: 20px 8px;
+                // margin: 0 32px;
+                position: relative;
+                flex: 0 0 33.333333%;
+                &:after{
+                    content: "";
+                    position: absolute;
+                    background-image: url('../images/icon-line-menu.svg');
+                    background-repeat: no-repeat;
+                    background-size: 100%;
+                    bottom: 0;
+                    left: 0;
+                    right: 0;
+                    height: 2px;
+                }
+            }
+            &-list{
+                display: flex;
+                justify-content: center;
+            }
+            &-list:first-child &-item{
+                &:before{
+                    content: "";
+                    position: absolute;
+                    background-image: url('../images/icon-line-menu.svg');
+                    background-repeat: no-repeat;
+                    background-size: 100%;
+                    top: 0;
+                    left: 0;
+                    right: 0;
+                    height: 2px;
+                }
+            }
+            h3{
+                @extend .ff-garamond-premr-pro;
+                font-size: 21px;
+                font-weight: 400;
+                text-transform: uppercase;
+                color: $primary-color;
+                text-align: center;
+            }
+            p{
+                font-size: 14px;
+                font-weight: 400;
+                text-transform: uppercase;
+                text-align: center;
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    &-3{
+        background: url('../images/bg-3.png') 50% 0 no-repeat fixed;
+        .fp-tableCell{
+            vertical-align: bottom;
+        }
+        .container-fluid{
+            .row{
+                margin-left: 0;
+            }
+        }
+        &__content{
+            flex: 1;
+            padding-left: $pl-main-xxl;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            margin-top: 50px;
+            &-header{
+                padding-right: 70px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+            }
+            h4{
+                position: relative;
+                margin-bottom: 26px;
+                text-transform: uppercase;
+                font-size: 33px;
+                font-weight: 400;
+                color: $primary-color;
+                @extend .ff-garamond-premr-pro;
+            }
+            P{
+                font-size: 16px;
+                font-weight: 400;
+                margin-bottom: 40px;
+            }
+        }
+        &__img{
+            flex: 2;
+            padding-right: 0;
+            img{
+                width: 100%;
+            }
+        }
+    }
+
+    &-4{
+        background: url('../images/bg-3.png') 50% 0 no-repeat fixed;
+        .fp-tableCell{
+            padding-bottom: 30px;
+            vertical-align: bottom;
+        }
+        &__content{
+            h4{
+                position: relative;
+                margin-bottom: 28px;
+                text-transform: uppercase;
+                font-size: 33px;
+                font-weight: 400;
+                color: $primary-color;
+                @extend .ff-garamond-premr-pro;
+            }
+            P{
+                font-size: 16px;
+                font-weight: 400;
+                margin-bottom: 40px;
+            }
+        }
+        &__info{
+            
+            &-1{
+                flex: 0 0 54%;
+                padding-right: 20px;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                .row{
+                    >div{
+                        padding: 0 10px;
+                    }
+                }
+            }
+            &-2{
+                flex: 0 0 46%;
+            }
+            img{
+                width: 100%;
+            }
+        }
+    }
+
+    &-5{
+        background: url('../images/bg-3.png') 50% 0 no-repeat fixed;
+        .fp-tableCell{
+            vertical-align: bottom;
+        }
+        .container-fluid{
+            .row{
+                margin-left: 0;
+            }
+        }
+        &__content{
+            padding-right: 70px;
+            margin-bottom: 20px;
+            &-header{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+            }
+            h4{
+                position: relative;
+                margin-bottom: 24px;
+                text-transform: uppercase;
+                font-size: 33px;
+                font-weight: 400;
+                color: $primary-color;
+                @extend .ff-garamond-premr-pro;
+            }
+            P{
+                font-size: 16px;
+                font-weight: 400;
+                margin-bottom: 40px;
+            }
+        }
+        &__slide{
+            margin-top:50px;
+        }
+        &__item{
+            border: 1px solid #edd9c0;
+            padding: 10px;
+            img{
+                width: 100%;
+            }
+        }
+        &__img{
+            img{
+                height: 100%;
+            }
+        }
+        .owl-nav{
+            >button{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 60px;
+                height: 60px;
+                background: linear-gradient(to top, #eec183 0%, #edd9c0 100%) !important;
+                cursor: pointer;
+                outline: none;
+                transition: transform .2s ease-in-out;
+                &:hover{
+                    transform: scale(1.2);
+                    transition: transform .2s ease-in-out;
+                }
+                svg{
+                    color: $text-color-secondary;
+                    font-size: 25px;
+                }
+            }
+            .owl-prev{
+                display: none;
+                position: absolute;
+                left: -25px;
+                top: 0;
+                bottom: 0;
+                margin: auto;
+            }
+            .owl-next{
+                position: absolute;
+                right: -25px;
+                top: 0;
+                bottom: 0;
+                margin: auto;
+            }
+        }
+    }
+
+    &-6{
+        background: url('../images/bg-3.png') 50% 0 no-repeat fixed;
+        .fp-tableCell{
+            padding-bottom: 50px;
+            vertical-align: bottom;
+        }
+        &__header{
+            h4{
+                position: relative;
+                margin-bottom: 45px;
+                text-transform: uppercase;
+                font-size: 33px;
+                font-weight: 400;
+                color: $primary-color;
+                @extend .ff-garamond-premr-pro;
+            }
+        }
+        &__slides{
+            position: relative;
+        }
+        &__list{
+            position: relative;
+        }
+        &__item{
+            max-width: 100%;
+            position: relative;
+            padding-bottom: 24px;
+            &-title{
+                position: absolute;
+                bottom: 14px;
+                left: 0;
+                right: 0;
+                text-align: center;
+                span{
+                    border: 1px solid $text-color;
+                    padding: 15px 2px;
+                    span{
+                        padding: 12px 26px;
+                        font-size: 16px;
+                        font-weight: 700;
+                        color: $text-color-secondary;
+                        background-color: $text-color;
+                    }
+                }
+            }
+        }
+        &__opacity1{
+            position: absolute;
+            right: -12px;
+            top: 0px;
+            bottom: 7%;
+            width: 80px;
+            background: linear-gradient(to left, #003d471a 0%, #14383d 16%, #003d476e 60%, #003d471f 80%, #ffffff00 100%);
+            z-index: 100;
+        }
+        &__opacity2{
+            position: absolute;
+            left: -12px;
+            top: 0px;
+            bottom: 7%;
+            width: 80px;
+            background: linear-gradient(to right, #003d471a 0%, #14383d 16%, #003d476e 60%, #003d471f 80%, #ffffff00 100%);
+            z-index: 100;
+        }
+        .owl-item:not(.active) &__item-title{
+            display: none;
+        }
+        .owl-nav{
+            >button{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 60px;
+                height: 60px;
+                background: linear-gradient(to top, #eec183 0%, #edd9c0 100%) !important;
+                cursor: pointer;
+                outline: none;
+                transition: transform .2s ease-in-out;
+                &:hover{
+                    transform: scale(1.2);
+                    transition: transform .2s ease-in-out;
+                }
+                svg{
+                    color: $text-color-secondary;
+                    font-size: 25px;
+                }
+            }
+            .owl-prev{
+                position: absolute;
+                left: 160px;
+                top: 0;
+                bottom: 10%;
+                margin: auto;
+            }
+            .owl-next{
+                position: absolute;
+                right: 160px;
+                top: 0;
+                bottom: 10%;
+                margin: auto;
+            }
+        }
+        .owl-dots{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 30px;
+            .owl-dot{
+                height: 11px;
+                width: 11px;
+                border: 1px solid $primary-color;
+                border-radius: 100%;
+                outline: none;
+                &:not(last-child){
+                    margin-right:25px;
+                }
+                &.active, &:hover{
+                    background-color: $primary-color;
+                    box-shadow: 0px 0px 0px 2px $background-color inset;
+                    height: 15px;
+                    width: 15px;
+                }
+            }
+        }
+    }
+
+    &-7{
+        background: url('../images/bg-3.png') 50% 0 no-repeat fixed;
+        .fp-tableCell{
+            vertical-align: bottom;
+            padding-bottom: 30px;
+        }
+        &__content{
+            &-header{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                padding-right: 70px;
+            }
+            h4{
+                position: relative;
+                margin-bottom: 20px;
+                text-transform: uppercase;
+                font-size: 33px;
+                font-weight: 400;
+                color: $primary-color;
+                @extend .ff-garamond-premr-pro;
+            }
+            P{
+                font-size: 16px;
+                font-weight: 400;
+                margin-bottom: 28px;
+            }
+        }
+        &__info{
+            margin-top:50px;
+            .row{
+                >div{
+                    &:nth-child(2n){
+                        padding-left: 0;
+                    }
+                    &:nth-child(1n){
+                        padding-right: 8px;
+                    }
+                    &:nth-child(2){
+                        h5{
+                            background-color: #e6c1d3;
+                        }
+                    }
+                    &:nth-child(3){
+                        h5{
+                            background-color: #b2dfd9;
+                        }
+                    }
+                    &:nth-child(4){
+                        h5{
+                            background-color: #ace0f1;
+                        }
+                    }
+                    &:nth-child(5){
+                        h5{
+                            background-color: #e2d5ca;
+                        }
+                    }
+                    &:nth-child(5){
+                        h5{
+                            background-color: #e9e8c5;
+                        }
+                    }
+                }
+            }
+            &-item{
+                border: 1px solid #edd9c0;
+                padding: 3px;
+                margin-bottom: 10px;
+                h5{
+                    color: $text-color-secondary;
+                    font-size: 16px;
+                    font-weight: 400;
+                    @extend .ff-garamond-premr-pro;
+                    text-transform: uppercase;
+                    background-color: #b9dcab;
+                    padding: 8px 0;
+                    text-align: center;
+                    margin-bottom: 10px;
+                }
+                div{
+                    padding: 0 10px 10px;
+                    p{
+                        color: $white-color;
+                        font-weight: 400;
+                        margin-bottom: 0;
+                        font-size: 14px;
+                    }
+                }
+            }
+        }
+        &__img{
+            padding-left: 30px;
+            img{
+                width: 100%;
+            }
+        }
+    }
+
+    &-8{
+        background: url('../images/bg-3.png') 50% 0 no-repeat fixed;
+        .fp-tableCell{
+            vertical-align: bottom;
+            padding-bottom: 30px;
+        }
+        &__content{
+            margin-top: -180px;
+            &-header{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                padding-right: 70px;
+            }
+            h4{
+                position: relative;
+                margin-bottom: 20px;
+                text-transform: uppercase;
+                font-size: 33px;
+                font-weight: 400;
+                color: $primary-color;
+                @extend .ff-garamond-premr-pro;
+            }
+            P{
+                font-size: 16px;
+                font-weight: 400;
+                margin-bottom: 10px;
+            }
+        }
+        &__img{
+            padding: 0 8%;
+            margin-top: 40px;
+            img{
+                width: 100%;
+            }
+        }
+        &__info{
+            margin-top: 40px;
+        }
+        .nav{
+            justify-content: space-between;
+            &-link{
+                border: 1px solid #b9dcab;
+                font-size: 21px;
+                font-weight: 400;
+                color: #b9dcab;
+                border-radius: 0;
+                @extend .ff-garamond-premr-pro;
+                padding: 3px;
+                flex: 0 0 30%;
+                text-align: center;
+                // margin-right: 24px;
+                background-color: transparent  !important;
+                margin-bottom: 12px;
+                span{
+                    display: block;
+                    padding: 16px 10px;
+                    text-transform: uppercase;
+                }
+                &.active{
+                    color: $text-color-secondary;
+                    span{
+                        background-color: #b9dcab;
+                    }
+                }
+            }
+        }
+    }
+
+    &-contact{
+        background: url('../images/bg-contact.png') 50% 0 no-repeat fixed;
+        color: $text-color-secondary;
+        .content-main{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            height: 100%;
+            justify-content: space-around;
+        }
+        &__logo{
+            margin-bottom: 70px;
+            img{
+                width: 240px;
+            }
+        }
+        &__info{
+            margin-bottom: 50px;
+            h4{
+                font-size: 33px;
+                font-weight: 400;
+                text-transform: uppercase;
+                @extend .ff-garamond-premr-pro;
+                margin-bottom: 24px;
+            }
+            p{
+                font-size: 16px;
+                font-weight: 400;
+                margin-bottom: 8px;
+            }
+        }
+        &__form{
+            max-width: 680px;
+            width: 680px;
+            .row{
+                >div{
+                    display: flex;
+                    align-items: center;
+                    border-top: 1px solid #003d47;
+                    border-bottom: 1px solid #003d47;
+                    padding: 8px 0;
+                    margin-bottom: 20px;
+                    flex: 1;
+                    &:nth-child(2n){
+                        margin-left: 30px;
+                    }
+                }
+                label{
+                    white-space: nowrap;
+                    margin-bottom: 0;
+                    font-size: 14px;
+                    font-weight: 400;
+                    margin-bottom: -5px;
+                }
+                input{
+                    background: transparent;
+                    border: none;
+                    outline: none;
+                    box-shadow: none;
+                }
+            }
+            button{
+                font-size: 14px;
+                font-weight: 700;
+                text-transform: uppercase;
+                background-color: transparent;
+                border: none;
+                outline: none;
+                box-shadow: none;
+                margin-top: 30px;
+                &:hover, &:focus{
+                    background-color: transparent;
+                    border: none;
+                    outline: none;
+                    box-shadow: none;
+                }
+                svg{
+                    margin-left: 10px;
+                    font-size: 20px;
+                }
+            }
+        }
+        &__footer{
+            text-transform: uppercase;
+            font-size: 13px;
+            font-weight: 400;
         }
     }
 
