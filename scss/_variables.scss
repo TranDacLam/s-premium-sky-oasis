@@ -4,13 +4,21 @@ $text-color: #edd9c0;
 $background-color: #003d47;
 $text-color-secondary:#003d47;
 
-$top-header: 60px;
+$top-header-xl: 30px;
+$top-header-xxl: 60px;
 $width-main-xxl: 1344px;
 
-$nav-bar-xl-width: calc(110px + 20px);
-$nav-bar-lg-width: calc(110px + 20px);
+$height-header: 77px;
 
-$pl-main-xxl: calc((100vw - #{$width-main-xxl} - #{$nav-bar-xl-width})/2);
+$pl-menu-xxl: 6%;
+$pl-menu-xl: 2%;
+
+$nav-bar-xxl-width: calc(#{$pl-menu-xxl} + 60px);
+$nav-bar-xl-width: calc(#{$pl-menu-xl} + 60px);
+$nav-bar-lg-width: calc(#{$pl-menu-xl} + 60px);
+
+$pl-main-xxl: calc((100vw - #{$width-main-xxl} - #{$nav-bar-xxl-width})/2);
+$pl-main-xl: calc((100vw - #{$width-main-xxl} - #{$nav-bar-xl-width})/2);
 
 $color-1: #b9dcab;
 $color-2: #e6c1d3;

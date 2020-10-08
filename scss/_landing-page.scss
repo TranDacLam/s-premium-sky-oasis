@@ -23,8 +23,8 @@
         position: fixed !important;
     }
     .navbar{
-        padding: 60px 0 60px 50px;
-        .collapse{
+        padding: 20px 0 20px $pl-menu-xl;
+        &-collapse{
             position: fixed;
             top: 0;
             left: 0;
@@ -39,7 +39,7 @@
             padding-top: 110px;
             justify-content: center;
             align-items: flex-start;
-            &.show{
+            &.show, &.collapsing{
                 display: flex;
             }
         }
@@ -52,6 +52,8 @@
                 font-weight: 400;
                 text-transform: uppercase;
                 padding-bottom: 20px;
+                cursor: pointer;
+                user-select: none;
                 &:hover, &.active{
                     color: $white-color;
                 }
@@ -112,6 +114,9 @@
                 text-transform: uppercase;
                 margin-top: 10px;
             }
+            &__img-2{
+                display: none;
+            }
         }
         &__sidebar{
             display: flex;
@@ -131,6 +136,8 @@
                 font-weight: 400;
                 color: $white-color;
                 padding: 10px 7px 18px;
+                cursor: pointer;
+                user-select: none;
                 &.active, &:hover{
                     color: $primary-color;
                     font-size: 15px;
@@ -154,6 +161,51 @@
                 }
             }
         }
+        &__icon{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            a{
+                transition: transform .3s ease-in-out;
+                &:hover{
+                    transform: scale(1.2);
+                }
+            }
+            &-2{
+                display: none;
+            }
+        }
+        &__hotline{
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+            background: linear-gradient(135deg,#edc97d,#fff,#edc97d);
+            background-size: 300% 300%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 0 0 2px $text-color-secondary inset;
+            border: 1px solid $primary-color;
+            animation: BorderBox 3s infinite;
+            display: none;
+            svg{
+                font-size: 18px;
+                color: $text-color-secondary;
+            }
+        }
+        &__logo{
+            display: none;
+            width: 200px;
+            position: absolute;
+            left: 0;
+            right: 0;
+            margin: auto;
+            top: 0px;
+            box-shadow: 0 20px 30px rgba(0,0,0,.1);
+            background: #003d47;
+            padding: 15px;
+        }
     }
     .section{
         position: relative;
@@ -162,9 +214,7 @@
         background-size: cover;
         background-position: center;
         padding-left: $nav-bar-xl-width;
-        // padding-top: $top-header;
         height: 100vh;
-        // transform: translate(0,100%);
         background-repeat: no-repeat;
         background-size: cover;
         position: absolute;
@@ -172,13 +222,12 @@
         width: 100%;
         left: 0;
         overflow: hidden;
-        transition: transform .8s ease-in-out;
     }
     
     /*header style*/
     .header{
         width: 100%;
-        top: $top-header;
+        top: $top-header-xl;
         left: 0;
         height: auto;
         z-index: 50;
@@ -187,6 +236,7 @@
         .content-main{
             display: flex;
             justify-content: space-between;
+            align-items: flex-start;
         }
         &__logo{
             img{
@@ -202,18 +252,18 @@
                 width: 45px;
                 height: 45px;
                 border-radius: 50%;
-                background: linear-gradient(135deg,#eec183,#edd9c0);
+                background: linear-gradient(135deg,#edc97d,#fff,#edc97d);
                 background-size: 300% 300%;
                 display: flex;
                 justify-content: center;
                 align-items: center;
-                box-shadow: 0 0 0 1px $text-color-secondary inset;
+                box-shadow: 0 0 0 2px $text-color-secondary inset;
                 border: 1px solid $primary-color;
                 margin-right: 20px;
                 animation: BorderBox 3s infinite;
                 svg{
                     font-size: 21px;
-                    color:$text-color-secondary;
+                    color: $text-color-secondary;
                 }
             }
             p{
@@ -302,7 +352,7 @@
             color: $primary-color;
         }
         &__content{
-            margin-bottom: 10%;
+            margin-bottom: 15%;
         }
         .link-arrow{
             justify-content: center;
@@ -327,7 +377,7 @@
         &__content{
             flex: 1;
             padding-right: 70px;
-            padding-left: $pl-main-xxl;
+            padding-left: $pl-main-xl;
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -375,6 +425,7 @@
             &-list{
                 display: flex;
                 justify-content: center;
+                padding: 0 10%;
             }
             &-list:first-child &-item{
                 &:before{
@@ -421,7 +472,7 @@
         }
         &__content{
             flex: 1.2;
-            padding-left: $pl-main-xxl;
+            padding-left: $pl-main-xl;
             display: flex;
             flex-direction: column;
             justify-content: space-evenly;
@@ -546,11 +597,15 @@
         &__item{
             border: 1px solid #edd9c0;
             padding: 10px;
+            margin: 2px;
             img{
                 width: 100%;
             }
         }
         &__img{
+            display: flex;
+            justify-content: center;
+            align-items: flex-end;
             img{
                 height: 100%;
             }
@@ -649,7 +704,7 @@
             bottom: 7%;
             width: 80px;
             background: linear-gradient(to left, #003d471a 0%, #14383d 16%, #003d476e 60%, #003d471f 80%, #ffffff00 100%);
-            z-index: 100;
+            z-index: 2;
         }
         &__opacity2{
             position: absolute;
@@ -658,7 +713,7 @@
             bottom: 7%;
             width: 80px;
             background: linear-gradient(to right, #003d471a 0%, #14383d 16%, #003d476e 60%, #003d471f 80%, #ffffff00 100%);
-            z-index: 100;
+            z-index: 2;
         }
         .owl-item:not(.active) &__item-title{
             display: none;
@@ -747,7 +802,7 @@
                 color: $primary-color;
                 @extend .ff-garamond-premr-pro;
             }
-            P{
+            p{
                 font-size: 21px;
                 font-weight: 400;
                 margin-bottom: 28px;
@@ -794,6 +849,7 @@
                 border: 1px solid #edd9c0;
                 padding: 3px;
                 margin-bottom: 10px;
+                height: calc(100% - 10px);
                 h5{
                     color: $text-color-secondary;
                     font-size: 16px;
@@ -886,7 +942,7 @@
                     padding: 14px 10px;
                     text-transform: uppercase;
                 }
-                &.active{
+                &.active, &:hover{
                     color: $text-color-secondary;
                     span{
                         background-color: $color-1;
@@ -895,7 +951,7 @@
                 &:nth-child(2){
                     border: 1px solid $color-2;
                     color: $color-2;
-                    &.active{
+                    &.active, &:hover{
                         color: $text-color-secondary;
                         span{
                             background-color: $color-2;
@@ -905,7 +961,7 @@
                 &:nth-child(3){
                     border: 1px solid $color-3;
                     color: $color-3;
-                    &.active{
+                    &.active, &:hover{
                         color: $text-color-secondary;
                         span{
                             background-color: $color-3;
@@ -915,7 +971,7 @@
                 &:nth-child(4){
                     border: 1px solid $color-4;
                     color: $color-4;
-                    &.active{
+                    &.active, &:hover{
                         color: $text-color-secondary;
                         span{
                             background-color:$color-4;
@@ -925,7 +981,7 @@
                 &:nth-child(5){
                     border: 1px solid$color-5;
                     color: $color-5;
-                    &.active{
+                    &.active, &:hover{
                         color: $text-color-secondary;
                         span{
                             background-color: $color-5;
@@ -935,7 +991,7 @@
                 &:nth-child(6){
                     border: 1px solid $color-6;
                     color: $color-6;
-                    &.active{
+                    &.active, &:hover{
                         color: $text-color-secondary;
                         span{
                             background-color:$color-6;
@@ -1044,6 +1100,64 @@
             font-weight: 400;
         }
     }
+
+
+    &--first{
+        .header{
+            display: none !important;
+        }
+    }
+
+    &--last{
+        .header{
+            &__logo{
+                opacity: 0;
+            }
+            &__hotline{
+                &-1{
+                    background-image: linear-gradient(135deg, #003d4766, #003d47, #edc97d);
+                    border-color: $text-color-secondary;;
+                    box-shadow: 0 0 0 2px $primary-color inset;
+                    svg{
+                        color: $primary-color;
+                    }
+                }
+                color: $text-color-secondary;
+            }
+        }
+        .navbar{
+            &-toggler {
+                span{
+                    color: $text-color-secondary;
+                }
+                &__img-1{
+                    display: none;
+                }
+                &__img-2{
+                    display: block;
+                }
+            }
+            &__box a{
+                color: $text-color-secondary;
+                &:after{
+                    background-color: $text-color-secondary !important;
+                }
+                &.active, &:hover{
+                    color: $text-color-secondary;
+                    font-weight: 700;
+                }
+            }
+            &__icon{
+                &-1{
+                    display: none;
+                }
+                &-2{
+                    display: block;
+                }
+            }
+        }
+    }
+
 
     .call-now-button{
         z-index: 9999;

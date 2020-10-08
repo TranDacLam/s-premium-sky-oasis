@@ -1,36 +1,5 @@
 $(function(){
 	
-	function addFullPage(){
-		// console.log($(window).width())
-		if($(window).width() > 992){
-			//fullpage js
-			new fullpage('#fullpage', {
-				anchors: [
-					'header', 'about', 'location-other', 
-					'location', 'utilities', 'ground',
-					'apartment', 'furniture', 'news', 'contact'
-				],
-				scrollBar: true,
-				css3: true,
-				paddingTop: '60px',
-				responsiveWidth: 992,
-				// menu: '#navbar-menu',
-				// offsetSections: true,
-				// navigation: true,
-			});
-
-			window.onbeforeunload = function () {
-				window.scrollTo(0,0);
-			};
-
-			// wow js
-			new WOW().init();
-		}
-	}
-
-	// addFullPage()
-	
-
 	/* Start slide */
 	let navText = [
 		`<svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-chevron-left" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
@@ -85,57 +54,20 @@ $(function(){
 			// breakpoint from 992 up
 			992 : {
 				stagePadding: 200,
+			},
+			1200 : {
+				stagePadding: 250,
+			},
+			1440 : {
+				stagePadding: 200,
 			}
 		}
 	});
 
-	// $('#section0').parallax("50%", 0.1);
-	// $('#section1').parallax("50%", 0.1);
-	// $('#section2').parallax("50%", 0.1);
-	// $('#section3').parallax("50%", 0.1);
-	// $('#section4').parallax("50%", 0.1);
-	// $('#section5').parallax("50%", 0.1);
-	// $('#section6').parallax("50%", 0.1);
-	// $('#section7').parallax("50%", 0.1);
-	// $('#section8').parallax("50%", 0.1);
-
-	/* Start Scroll fixed Menu */
-	// var header = document.getElementById("landing-nav");
-	// var sticky = header.offsetTop;
-	// window.onscroll = function() {
-	// 	myFunction()
-	// 	let btnTop = $('.scroll-to-top');
-	// 	if (window.scrollY >= 300) {
-	// 		btnTop.addClass('is-visible');
-	// 	} else {
-	// 		btnTop.removeClass('is-visible');
-	// 	} 
-	// };
-
-	// myFunction()
-
-	// function myFunction() {
-	// 	if (window.pageYOffset > sticky) {
-	// 		header.classList.add("sticky-top");
-	// 	} else {
-	// 		header.classList.remove("sticky-top");
-	// 	}
-	// }
-	/* End Scroll fixed Menu */
 
 	$('.scroll-to-top').on('click', function(){
 		$('html, body').animate({scrollTop:0}, '300');
 	})
-
-	// Scrollspy
-	$('body').scrollspy({ target: '#navbar-menu', offset: 90 })
-
-	$("#navbar-menu a").on('click', function(event) {
-		var _this = $(this);
-		$('html, body').stop().animate({ scrollTop: $(_this.attr('href')).offset().top }, 1500);
-		$('.navbar-toggler').trigger('click');
-		event.preventDefault();
-	});
 	  
 	//   OpacityScroll.init('s-premium');
 	function scrollFullPage() {
@@ -143,15 +75,56 @@ $(function(){
 		var allEle = $(`.s-premium .section`)
 		var index = 0
 		var maxIndex = allEle.length
+		var duration = 700
 		function opacityScroll(){
 			[].forEach.call(allEle, (child, idx) => {
 				console.log(idx, child)
 				if(idx == index){
-					$(child).css({'z-index': 2})
-				}else{
-					$(child).css({'transform': 'translate(0%, 100%)'})
+					$(child).css({'z-index': 3})
 				}
 			})
+		}
+		function onTranslate(type, el, elTemp){
+			let distanceA = 100
+			let distanceZ = 0
+			if(index == 0){
+				$('.s-premium').addClass('s-premium--first');
+			}else {
+				setTimeout(() => {
+					$('.s-premium').removeClass('s-premium--first');
+				}, duration)
+			}
+			if (index == 8){
+				setTimeout(() => {
+					$('.s-premium').addClass('s-premium--last');
+				}, duration)
+			}else{
+				setTimeout(() => {
+					$('.s-premium').removeClass('s-premium--last');
+				}, duration)
+			}
+			if(type == "up"){
+				distanceA = -100
+				distanceZ = 0
+			}
+			el.css({'z-index': 4})
+			elTemp.css({'z-index': 3})
+			$('#navbar-box-menu a, #navbar-menu a').removeClass('active')
+			$("#navbar-box-menu").find(`[data-index='${index}']`).addClass('active')
+			$("#navbar-menu").find(`[data-index='${index}']`).addClass('active')
+			$({distanceTranslate: distanceA}).animate({ distanceTranslate : distanceZ }, {
+				step: function(go) {
+					el.css('transform','translate(0%, '+ go +'%)');
+				},
+				duration,
+				easing: 'linear',
+				complete: function(){ 
+					elTemp.css({'z-index': 1})
+					setTimeout(() => {
+						isScroll = false
+					}, 300)
+				}
+			});
 		}
 		opacityScroll()
 
@@ -163,42 +136,48 @@ $(function(){
 			}
 			isScroll = true
 			if (delta < 0) {
-				console.log("Scroll down");
 				let indexTemp = index
 				index += 1
-				$(allEle[index]).css({'z-index': 2, 'transform': 'translate(0%, 0%)'})
-				$(allEle[indexTemp]).css({'z-index': 1})
-				setTimeout(() => {
-					$(allEle[indexTemp]).css({'transform': 'translate(0%, -100%)'})
-				}, 800)
+				onTranslate('down', $(allEle[index]), $(allEle[indexTemp]))
 			} else {
-				console.log("Scroll up");
 				let indexTemp = index
 				index -= 1
-				$(allEle[index]).css({'z-index': 2, 'transform': 'translate(0%, 0%)'})
-				$(allEle[indexTemp]).css({'z-index': 1})
-				setTimeout(() => {
-					$(allEle[indexTemp]).css({'transform': 'translate(0%, 100%)'})
-				}, 800)
+				onTranslate('up', $(allEle[index]), $(allEle[indexTemp]))
 			}
-			setTimeout(() => {
-				isScroll = false
-			}, 1600)
 		})
 
-		$('#navbar-box-menu').on('click', 'a', function(e){
+		$('#navbar-box-menu, #navbar-menu').on('click', 'a', function(e){
 			let indexTagA = parseInt($(this).attr('data-index'));
 			let indexTemp = index
 			index = indexTagA
-			$(allEle[index]).css({'z-index': 2, 'transform': 'translate(0%, 0%)'})
-			$(allEle[indexTemp]).css({'z-index': 1})
-			setTimeout(() => {
-				$(allEle[indexTemp]).css({'transform': 'translate(0%, -100%)'})
-			}, 800)
-			console.log(index)
+			if(index == indexTemp) return
+			isScroll = true
+			if(index > indexTemp){
+				onTranslate('down', $(allEle[index]), $(allEle[indexTemp]))
+			}else{
+				onTranslate('up', $(allEle[index]), $(allEle[indexTemp]))
+			}
+			$('#navbarSupportedContent').collapse('hide');
 		})
 	}
 
-	scrollFullPage()
-	  
+	function addFullPage(){
+		// console.log($(window).width())
+		if($(window).width() > 1200){
+			scrollFullPage()
+			// wow js
+			new WOW().init();
+		}else{
+
+			$("#navbar-menu a").on('click', function(event) {
+				var _this = $(this);
+				$('html, body').stop().animate({ scrollTop: $(_this.attr('href')).offset().top - 63 }, 1500);
+				if(!$(this).hasClass('collapsed') && $(window).width() <= 1200){
+					$('#navbarSupportedContent').collapse('hide');
+				}
+				event.preventDefault();
+			});
+		}
+	}
+	addFullPage()
 })
