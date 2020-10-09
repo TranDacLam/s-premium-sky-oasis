@@ -616,6 +616,16 @@
 
 @media only screen and (max-width: 768px) {
     .s-premium{
+        &-1{
+            &__content{
+                img{
+                    width: 70%;
+                }
+                h2{
+                    margin-top: 35px;
+                }
+            }
+        }
         &-8{
             &__content{
                 margin-top: 20px;
@@ -687,6 +697,13 @@
                     width: 100%;
                 }
             }
+            &__zoom{
+                width: 40px;
+                height: 40px;
+                img{
+                    width: 22px;
+                }
+            }
         }
         &-4{
             &__info{
@@ -729,15 +746,20 @@
                     position: unset;
                     > span{
                         border: none;
+                        padding: 0;
                         span{
                             font-size: 14px;
                             display: block;
+                            padding: 8px 10px;
                         }
                     }
                 }
             }
+            &__opacity1, &__opacity2{
+                display:none;
+            }
             .owl-dots{
-                margin-top: 10px;
+                margin-top: 20px;
             }
         }
         &-7{
@@ -759,6 +781,84 @@
                     padding: 6px 4px;
                     white-space: nowrap;
                     font-size: 16px;
+                }
+            }
+            .nav{
+                padding-top: 160px;
+            }
+            &__content{
+                &-header{
+                    margin-top: -300px;
+                }
+            }
+            &__info{
+                margin-top: 490px;
+                overflow: hidden;
+            }
+            &__img{
+                margin-top: -660px;
+                padding-left: 15px;
+            }
+            #v-pills-8-1{
+                .s-premium-8{
+                    &__info{
+                        img{
+                            transform: matrix(2, 0, 0, 2, 172, 100);
+                        }
+                    }
+                }
+            }
+            #v-pills-8-2{
+                .s-premium-8{
+                    &__info{
+                        img{
+                            transform: matrix(2, 0, 0, 2, 172, 12);
+                        }
+                    }
+                }
+            }
+            #v-pills-8-3{
+                .s-premium-8{
+                    &__info{
+                        margin-top: 510px;
+                        img{
+                            transform: matrix(2, 0, 0, 2, 172, -80);
+                        }
+                    }
+                    &__img{
+                        margin-top: -680px;
+                    }
+                }
+            }
+            #v-pills-8-4{
+                .s-premium-8{
+                    &__info{
+                        img{
+                            transform: matrix(2, 0, 0, 2, 172, -90);
+                        }
+                    }
+                }
+            }
+            #v-pills-8-5{
+                .s-premium-8{
+                    &__info{
+                        img{
+                            transform: matrix(2, 0, 0, 2, 172, 164);
+                        }
+                    }
+                }
+            }
+            #v-pills-8-6{
+                .s-premium-8{
+                    &__info{
+                        margin-top: 450px;
+                        img{
+                            transform: matrix(2, 0, 0, 2, 172, -165);
+                        }
+                    }
+                    &__img{
+                        margin-top: -620px;
+                    }
                 }
             }
         }

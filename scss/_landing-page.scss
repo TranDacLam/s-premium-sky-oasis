@@ -354,6 +354,9 @@
         }
         &__content{
             margin-bottom: 15%;
+            img{
+                width: 58%;
+            }
         }
         .link-arrow{
             justify-content: center;
@@ -756,7 +759,7 @@
                 border: 1px solid $primary-color;
                 border-radius: 100%;
                 outline: none;
-                &:not(last-child){
+                &:not(:last-child){
                     margin-right:25px;
                 }
                 &.active, &:hover{
