@@ -5,13 +5,19 @@ $background-color: #003d47;
 $text-color-secondary:#003d47;
 
 $top-header-xl: 30px;
-$top-header-xxl: 60px;
+$top-header-xxl: 40px;
 $width-main-xxl: 1344px;
 
 $height-header: 77px;
 
 $pl-menu-xxl: 6%;
 $pl-menu-xl: 2%;
+
+$pt-section-xxl: calc(#{$height-header} + #{$top-header-xxl} + 20px);
+$pt-section-xl: calc(#{$height-header} + #{$top-header-xl} + 20px);
+
+$height-content-main-xxl: calc(100vh - #{$pt-section-xxl});
+$height-content-main-xl: calc(100vh - #{$pt-section-xl});
 
 $nav-bar-xxl-width: calc(#{$pl-menu-xxl} + 60px);
 $nav-bar-xl-width: calc(#{$pl-menu-xl} + 60px);
