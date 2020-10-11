@@ -223,7 +223,6 @@
         left: 0;
         overflow: hidden;
         z-index: 1;
-        transform: translate(0%, 100%);
     }
     
     /*header style*/
@@ -344,7 +343,6 @@
         align-items: center;
         &.section{
             z-index: 1020;
-            transform: translate(0%, 0%);
         }
         h2{
             margin-top: 45px;
