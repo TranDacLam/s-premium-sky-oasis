@@ -258,8 +258,7 @@ img {
     width: 100%;
     left: 0;
     overflow: hidden;
-    z-index: 1;
-    transform: translate(0%, 100%); }
+    z-index: 1; }
   .s-premium .header {
     width: 100%;
     top: 30px;
@@ -356,8 +355,7 @@ img {
     display: flex;
     align-items: center; }
     .s-premium-1.section {
-      z-index: 1020;
-      transform: translate(0%, 0%); }
+      z-index: 1020; }
     .s-premium-1 h2 {
       margin-top: 45px;
       margin-bottom: 20px;
@@ -1038,6 +1036,10 @@ img {
     padding-bottom: 15px;
     display: flex;
     align-items: center; }
+  .s-premium .section {
+    transform: translate(0%, 100%); }
+  .s-premium-1 .section {
+    transform: translate(0%, 0%); }
   .s-premium-2 .section-wrapper {
     flex-direction: column; }
   .s-premium-2__info-item {
