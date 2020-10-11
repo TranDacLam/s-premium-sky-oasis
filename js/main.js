@@ -1,3 +1,7 @@
+$(window).on('load', function(){
+	
+});
+
 $(function(){
 	
 	/* Start slide */
@@ -272,10 +276,10 @@ $(function(){
 
 	addFullPage()
 
-	$(window).on('load', function(){
-		$('#loading').css({'opacity': '0'});
-		setTimeout(() => {
-			$('#loading').css({'display': 'none'});
-		}, 500)
-	});
+	$('#loading').css({'opacity': '0'});
+	$('#loading').css({'display': 'none'});
+	
+	var myLazyLoad = new LazyLoad();
+
+	
 })
