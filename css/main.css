@@ -43,13 +43,13 @@ img {
 .ff-muli-regular {
   font-family: 'Muli-Regular'; }
 
-.ff-muli-bold {
+.ff-muli-bold, .loading {
   font-family: 'Muli-Bold'; }
 
 .ff-muli-extrabold {
   font-family: 'Muli-ExtraBold'; }
 
-.ff-garamond-premr-pro, .s-premium-2__content h4, .s-premium-2__info h3, .s-premium-3__content h4, .s-premium-4__content h4, .s-premium-5__content h4, .s-premium-6__header h4, .s-premium-7__content h4, .s-premium-7__info-item h5, .s-premium-8__content h4, .s-premium-8 .nav-link, .s-premium-contact__info h4 {
+.ff-garamond-premr-pro, .s-premium-2__content h4, .s-premium-2__info h3, .s-premium-3__content h4, .s-premium-4__content h4, .s-premium-5__content h4, .s-premium-6__header h4, .s-premium-7__content h4, .s-premium-7__info-item h5, .s-premium-8__content h4, .s-premium-8 .nav-link, .s-premium-contact__info h4, .loading span {
   font-family: 'Garamond-Premr-Pro'; }
 
 .color-1 {
@@ -257,7 +257,8 @@ img {
     top: 0;
     width: 100%;
     left: 0;
-    overflow: hidden; }
+    overflow: hidden;
+    z-index: 1; }
   .s-premium .header {
     width: 100%;
     top: 30px;
@@ -353,6 +354,8 @@ img {
     background: url("../images/bg-1.jpg");
     display: flex;
     align-items: center; }
+    .s-premium-1.section {
+      z-index: 1020; }
     .s-premium-1 h2 {
       margin-top: 45px;
       margin-bottom: 20px;
@@ -945,6 +948,61 @@ img {
     display: none; }
   .s-premium--last .navbar__icon-2 {
     display: block; }
+
+.loading {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 150px;
+  height: 150px;
+  background: transparent;
+  border: 3px solid #edd9c036;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 24px;
+  font-size: 14px;
+  color: #eec183;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  text-shadow: 0 0 5px #ffffff;
+  box-shadow: 0 0 20px #edd9c0;
+  z-index: 1031;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column; }
+  .loading span {
+    font-size: 18px; }
+  .loading-wrapper {
+    opacity: 1;
+    overflow: hidden;
+    transition: opacity .5s ease-in-out;
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: #000000d1; }
+  .loading:before {
+    content: '';
+    position: absolute;
+    top: -3px;
+    left: -3px;
+    width: 100%;
+    height: 100%;
+    border: 3px solid transparent;
+    border-bottom: 3px solid #eec183;
+    border-top: 3px solid #eec183;
+    border-radius: 50%;
+    animation: animateC 2s linear infinite; }
+
+@keyframes animateC {
+  0% {
+    transform: rotate(0deg); }
+  100% {
+    transform: rotate(360deg); } }
 
 @keyframes BorderBox {
   0%,

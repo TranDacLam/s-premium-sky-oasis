@@ -271,4 +271,11 @@ $(function(){
 	});
 
 	addFullPage()
+
+	$(window).on('load', function(){
+		$('#loading').css({'opacity': '0'});
+		setTimeout(() => {
+			$('#loading').css({'display': 'none'});
+		}, 500)
+	});
 })
